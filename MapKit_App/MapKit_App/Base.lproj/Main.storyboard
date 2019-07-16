@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapKit_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AVr-Hz-1yS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="567"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="s2C-AS-e1n">
+                                <rect key="frame" x="81.5" y="618" width="212" height="29"/>
+                                <segments>
+                                    <segment title="Standard"/>
+                                    <segment title="Satellite"/>
+                                    <segment title="Hybrid"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hx7-yy-Ayt">
+                                <rect key="frame" x="132.5" y="587" width="110" height="30"/>
+                                <state key="normal" title="New Annotation"/>
+                                <connections>
+                                    <action selector="pinAddress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IE4-1I-IFM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="AVr-Hz-1yS" secondAttribute="bottom" constant="80" id="5Ic-4J-t2h"/>
+                            <constraint firstItem="Hx7-yy-Ayt" firstAttribute="top" secondItem="AVr-Hz-1yS" secondAttribute="bottom" id="Igk-gL-7x2"/>
+                            <constraint firstItem="s2C-AS-e1n" firstAttribute="top" secondItem="Hx7-yy-Ayt" secondAttribute="bottom" constant="1" id="U3t-ij-BaL"/>
+                            <constraint firstItem="AVr-Hz-1yS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UMn-jv-1YM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="s2C-AS-e1n" secondAttribute="bottom" constant="21" id="bmd-0m-9DA"/>
+                            <constraint firstItem="Hx7-yy-Ayt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dPJ-CD-pPt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AVr-Hz-1yS" secondAttribute="trailing" id="lU2-dy-xod"/>
+                            <constraint firstItem="s2C-AS-e1n" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s8Y-XX-b6m"/>
+                            <constraint firstItem="AVr-Hz-1yS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uNU-CM-1zT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="AVr-Hz-1yS" id="oWQ-zh-rTs"/>
+                        <outlet property="segmentedControl" destination="s2C-AS-e1n" id="pKK-fp-ge5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
